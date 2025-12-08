@@ -1,2 +1,152 @@
-index
+<!doctype html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Bilal's Portfolio</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+	<!-- --------------- HEADER --------------- -->
+	<header class="header">
+		<div class="container header__inner">
+			<a href="#home" class="logo">Muhammad Bilal</a>
+
+			<button class="nav-toggle" aria-label="toggle navigation">
+				<span class="hamburger"></span>
+			</button>
+
+			<nav class="nav">
+				<ul class="nav__list">
+					<li><a href="#home" class="nav__link active">Home</a></li>
+					<li><a href="#about" class="nav__link">About</a></li>
+					<li><a href="#projects" class="nav__link">Work</a></li>
+					<li><a href="#contact" class="nav__link">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<!-- --------------- HERO --------------- -->
+		<section id="home" class="hero">
+			<div class="container hero__content">
+				<p class="hero__subtitle">Hi, my name is</p>
+				<h1 class="hero__title">Muhammad Bilal</h1>
+				<p class="hero__description">
+					I build fast, accessible, and pixel-perfect things for the web.
+				</p>
+				<a href="#projects" class="btn">See my work</a>
+			</div>
+		</section>
+
+		<!-- --------------- ABOUT --------------- -->
+		<section id="about" class="about section">
+			<div class="container">
+				<h2 class="section__title">About me</h2>
+				<div class="about__grid">
+					<div class="about__text">
+						<p>
+							I’m a self-taught front-end developer who loves turning complex
+							problems into simple, beautiful designs. 
+						</p>
+						<p>Here are a few technologies I work with:</p>
+						<ul class="skills">
+							<li>HTML / CSS / JS</li>
+							<li>Tailwind / Styled-components</li>
+                            <li>Bootstrap</li>
+							<li>MySQL</li>
+						</ul>
+					</div>
+					<div class="about__img-wrapper">
+						<img src="assets/you.jpg" alt="You" class="about__img" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- --------------- PROJECTS --------------- -->
+		<section id="projects" class="projects section">
+			<div class="container">
+				<h2 class="section__title">Featured work</h2>
+
+				<ul class="filter__list">
+					<li><button class="filter__btn active" data-filter="all">All</button></li>
+					<li><button class="filter__btn" data-filter="react">React</button></li>
+					<li><button class="filter__btn" data-filter="vanilla">Vanilla</button></li>
+					<li><button class="filter__btn" data-filter="design">Design</button></li>
+				</ul>
+
+				<div class="projects__grid">
+					<!-- Project 1 -->
+					<article class="project" data-category="react">
+						<img src="assets/project1.jpg" alt="Project 1" class="project__img" />
+						<div class="project__info">
+							<h3>Project One</h3>
+							<p>Next.js, Tailwind, Sanity CMS</p>
+							<a href="https://github.com" target="_blank" class="project__link">GitHub</a>
+							<a href="https://demo.com" target="_blank" class="project__link">Live Demo</a>
+						</div>
+					</article>
+
+					<!-- Project 2 -->
+					<article class="project" data-category="vanilla">
+						<img src="assets/project2.jpg" alt="Project 2" class="project__img" />
+						<div class="project__info">
+							<h3>Vanilla JS Arcade</h3>
+							<p>Canvas, Web Audio, ES6</p>
+							<a href="https://github.com" target="_blank" class="project__link">GitHub</a>
+							<a href="https://demo.com" target="_blank" class="project__link">Live Demo</a>
+						</div>
+					</article>
+
+					<!-- Project 3 -->
+					<article class="project" data-category="design">
+						<img src="assets/project3.jpg" alt="Project 3" class="project__img" />
+						<div class="project__info">
+							<h3>Brand Identity</h3>
+							<p>Figma, Illustrator</p>
+							<a href="assets/case-study.pdf" target="_blank" class="project__link">Case Study</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- --------------- CONTACT --------------- -->
+		<section id="contact" class="contact section">
+			<div class="container contact__content">
+				<h2 class="section__title">Let’s build something</h2>
+				<p>Drop me a line and I’ll get back within 24 h.</p>
+
+				<form class="contact__form" id="contactForm" novalidate>
+					<input type="text" name="name" placeholder="Name" required />
+					<input type="email" name="email" placeholder="Email" required />
+					<textarea name="message" rows="5" placeholder="Message" required></textarea>
+					<button type="submit" class="btn">Send message</button>
+					<span class="form__status"></span>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<!-- --------------- FOOTER --------------- -->
+	<footer class="footer">
+		<div class="container footer__inner">
+			<small>© <span id="year"></span> by Muhammad Bilal . All rights reserved.</small>
+			<div class="social">
+				<a href="https://github.com/muhammadbilalajmal" target="_blank" aria-label="GitHub">GitHub</a>
+				<a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+				<a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
